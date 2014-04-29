@@ -1,0 +1,31 @@
+import info.gridworld.actor.Bug; 
+
+public class DancingBug extends Bug{
+    private int steps;
+    private int sideLength;
+    private int[]data;
+
+    public DancingBug(int[]data){
+	this.data = data;
+        steps = 0;
+        sideLength = length;
+    }
+
+    public void act()
+    {
+        if (steps < sideLength && canMove() && stes > 0){
+            move();
+            steps++;
+	}
+        else if(steps < sideLength && stes > 0){
+	    for(int i = 0; i < data.length; i ++){
+		for(int j = 0; j < data[i]; j ++){
+		    turn();
+		}
+	    }
+            steps = 0;
+        }else{
+	    return;
+	}
+    }
+}
